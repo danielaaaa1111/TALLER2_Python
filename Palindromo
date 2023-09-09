@@ -1,0 +1,20 @@
+def es_palindromo(numero):
+numero_original = numero
+numero_invertido = 0
+
+while numero > 0:
+digito = numero % 10
+numero_invertido = numero_invertido * 10 + digito
+numero //= 10
+
+return numero_original == numero_invertido
+
+try:
+numero = int(input("Ingrese un número: "))
+
+if es_palindromo(numero):
+print(f"{numero} es un número palíndromo.")
+else:
+print(f"{numero} no es un número palíndromo.")
+except ValueError:
+print("Recuerde, ingrese un número entero.")
