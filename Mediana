@@ -1,0 +1,28 @@
+numeros = []
+
+while True:
+entrada = input("Ingrese un número entero o '.' para finalizar: ")
+
+if entrada == ".":
+break
+
+try:
+numero = int(entrada)
+numeros.append(numero)
+except ValueError:
+print("Entrada inválida. Ingrese un número entero válido o '.' para finalizar.")
+
+numeros.sort()
+
+n = len(numeros)
+mediana = 0
+
+if n % 2 == 1:
+mediana = numeros[n // 2]
+else:
+num1 = numeros[n // 2 - 1]
+num2 = numeros[n // 2]
+mediana = (num1 + num2) / 2
+
+
+print(f"La mediana es {mediana}.")
