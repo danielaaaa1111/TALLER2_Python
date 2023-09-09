@@ -1,0 +1,13 @@
+print("Ingrese los minutos del viaje")
+acumulador = 0
+minutos = 1
+
+while minutos > 0:
+    minutos = int(input())
+    acumulador += minutos
+
+total_minutos = acumulador
+
+horas = total_minutos // 60
+total_total_minutos = total_minutos % 60
+print(f"El total del tiempo fue {horas}:{total_total_minutos}")
